@@ -220,7 +220,7 @@ img
       transform: rotate(0deg);
     }
     100% {
-      top: 100%; /* Fall to the bottom of the viewport */
+      top: 100%;
       opacity: 0;
       transform: rotate(360deg);
     }
@@ -229,32 +229,32 @@ img
   .leaf:nth-child(1) {
     background-image: url('leaf_01.png');
     left: 10%;
-    animation-duration: 5s; /* Adjust animation duration */
-    animation-delay: 0s; /* Adjust animation delay */
+    animation-duration: 5s; 
+    animation-delay: 0s; 
   }
   
   .leaf:nth-child(2) {
     background-image: url('leaf_02.png');
     left: 30%;
-    animation-duration: 8s; /* Adjust animation duration */
-    animation-delay: 1s; /* Adjust animation delay */
+    animation-duration: 8s; 
+    animation-delay: 1s; 
   }
 
   .leaf:nth-child(3) {
     background-image: url('leaf_03.png') ;
     left: 50%;
-    animation-duration: 8s; /* Adjust animation duration */
-    animation-delay: 2s; /* Adjust animation delay */
+    animation-duration: 8s; 
+    animation-delay: 2s; 
   }
   .leaf:nth-child(4) {
     background-image: url('leaf_04.png');
     left: 70%;
-    animation-duration: 8s; /* Adjust animation duration */
-    animation-delay: 3s; /* Adjust animation delay */
+    animation-duration: 8s;
+    animation-delay: 3s; 
   }
   .leaf:nth-child(5) {
     background-image: url('leaf_01.png');
     left: 90%;
-    animation-duration: 8s; /* Adjust animation duration */
-    animation-delay: 4s; /* Adjust animation delay */
+    animation-duration: 8s; 
+    animation-delay: 4s; 
   }
