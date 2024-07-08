@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background: url(bg.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image
+{
+    width: 100vw;
+    height: 100vh;
+    background: url(trees.png)no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.container
+{
+    width: 400px;
+    height: 500px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 3px solid rgba(255,255,255,0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container::before
+{
+    content:'';
+    position: absolute;
+    top:-50%;
+    left:-50%;
+    width: 400px;
+    height: 500px;
+    background: linear-gradient(0deg,transparent);
+}
+
+h2
+{
+    color: #b52323;
+    font-size: 2em;
+    padding: 20px 0;
+}
+
+.form-group
+{
+    position: relative;
+    width: 330px;
+    margin: 30px 0;
+    border-bottom: 3px solid #b52323;
+}
+
+.form-group input
+{
+    width: 100%;
+    height: 50px;
+    padding: 0 35px 0 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.form-group label
+{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #fff;
+    transition: 0.5s;
+}
+
+input:focus ~ label,
+input:valid ~label
+{
+    color: #ffff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+
+.form-group:focus ~ i,
+.form-group:valid ~ i
+{
+    height:44px;
+}
+
+p
+{
+    display: flex;
+    justify-content: space-between ;
+    text-align: center;
+    color: #b52323;
+    margin:10px 0;
+}
+
+p>a
+{
+    text-decoration: none;
+    color: #ffff;
+    font-weight: 600;
+}
+
+p>a:hover
+{
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
+
+#btn
+{
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.5s;
+    background: #b52323;
+    color:#fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#btn:hover
+{
+    background: #b33a3a;
+}
+
+img 
+{
+    width: 215px;
+    height: 215px;
+    background-color: transparent;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+    animation-direction: normal;
+}
+
+@keyframes example {
+    0% {
+        left: 0;
+        transform: scaleX(-1);
+      }
+      25% {
+        left: 50%;
+        transform: scaleX(-1);
+      }
+      50% {
+        left: 100%;
+        transform: scaleX(-1);
+      }
+      51% {
+        left: 100%;
+        transform: scaleX(1);
+      }
+
+      75% {
+        left: 50%;
+        transform: scaleX(1);
+      }
+      100% {
+        left: 0;
+        transform: scaleX(1);
+      }
+    
+}
+
+
+.leaf-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .leaf {
+    position: absolute;
+    top: -50px; 
+    left: calc(50% - 25px); 
+    width: 50px; 
+    height: 50px;
+    background-size: cover;
+    background-repeat: repeat;
+    animation: leaf-fall 5s linear infinite; 
+  }
+  
+  @keyframes leaf-fall {
+    0% {
+      top: -50px;
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 100%; /* Fall to the bottom of the viewport */
+      opacity: 0;
+      transform: rotate(360deg);
+    }
+  }
+
+  .leaf:nth-child(1) {
+    background-image: url('leaf_01.png');
+    left: 10%;
+    animation-duration: 5s; /* Adjust animation duration */
+    animation-delay: 0s; /* Adjust animation delay */
+  }
+  
+  .leaf:nth-child(2) {
+    background-image: url('leaf_02.png');
+    left: 30%;
+    animation-duration: 8s; /* Adjust animation duration */
+    animation-delay: 1s; /* Adjust animation delay */
+  }
+
+  .leaf:nth-child(3) {
+    background-image: url('leaf_03.png') ;
+    left: 50%;
+    animation-duration: 8s; /* Adjust animation duration */
+    animation-delay: 2s; /* Adjust animation delay */
+  }
+  .leaf:nth-child(4) {
+    background-image: url('leaf_04.png');
+    left: 70%;
+    animation-duration: 8s; /* Adjust animation duration */
+    animation-delay: 3s; /* Adjust animation delay */
+  }
+  .leaf:nth-child(5) {
+    background-image: url('leaf_01.png');
+    left: 90%;
+    animation-duration: 8s; /* Adjust animation duration */
+    animation-delay: 4s; /* Adjust animation delay */
+  }
